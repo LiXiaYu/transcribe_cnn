@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "./cnn_beijing/beijing_cnn.py", line 15, in <module>
+    import transcribe_common as Kc
+ModuleNotFoundError: No module named 'transcribe_common'

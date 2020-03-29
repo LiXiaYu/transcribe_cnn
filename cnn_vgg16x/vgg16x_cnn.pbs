@@ -1,0 +1,17 @@
+#PBS -N python_cnn_beijing
+#PBS -l nodes=8:ppn=16
+#PBS -j oe
+#PBS -l walltime=240:0:0
+#PBS -q high
+
+source envsh/anaconda3-2019-07.sh
+
+source activate liqiDL
+
+cd /public/home/liqi/programing/transcribe_cnn
+export PATH=/public/home/liqi/programing/transcribe_cnn/:$PATH
+export PATH=/public/home/liqi/programing/transcribe_cnn/cnn_vgg16x/:$PATH
+
+
+python ./cnn_vgg16x/cnn_vgg16x_preSet_Fpr.py
+python ./cnn_vgg16x/cnn_vgg16x_ac_combined.py

@@ -1,0 +1,15 @@
+#PBS -N python_cnn_mix_vgg16x
+#PBS -l nodes=8:ppn=16
+#PBS -j oe
+#PBS -l walltime=240:0:0
+#PBS -q high
+
+source envsh/anaconda3-2019-07.sh
+
+source activate liqiDL
+
+cd /public/home/liqi/programing/transcribe_cnn
+
+python cnn_mix_vgg16x.py
+python cnn_mix_vgg16x_preSet.py
+python cnn_mix_vgg16x_inception.py
